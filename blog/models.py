@@ -9,6 +9,15 @@ class Blog(models.Model):
     slug = models.CharField(max_length=100)
     time = models.DateTimeField(auto_now=True)
 
+    CATEGORY_CHOICES = [
+        ('fact', 'Fact'),
+        ('scripture', 'Scripture'),
+        ('other', 'Other'),
+    ]
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='other')
+
+    image = models.ImageField(upload_to="blog_images/", null=True, blank=True)
+
     def __str__(self):
         return self.title
     
