@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block blogactive %}active{% endblock blogactive %}
+
+{% block css %}
+<style>
+  .blog-container {
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .blog-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+</style>
+{% endblock css %}
+
+{% block body %}
+
+<body class="bg-dark"></body>
+
+<div class="container blog-container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+
+      <!-- Title -->
+      <h1 class="blog-title text-white mt-4">{{ blog.title }}</h1>
+
+      <!-- Optional: Image -->
+      {% if blog.image %}
+      <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="blog-image">
+      {% endif %}
+
+      <!-- Content -->
+      <div class="blog-content text-white">
+        {{ blog.content|safe }}
+      </div>
+
+      <!-- Post Date -->
+      <p class="text-muted mt-4">Posted on {{ blog.time|date:"F j, Y, g:i a" }}</p>
+
+    </div>
+  </div>
+</div>
+{% endblock body %}

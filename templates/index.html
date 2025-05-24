@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block homeactive %}active{% endblock homeactive %}
+{% block body %}
+{% load static %}
+
+<body class="bg-dark">
+    
+</body>
+
+<div class="container-fluid mx-0 px-0">
+    {% comment %} <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> {% endcomment %}
+        {% comment %} <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol> {% endcomment %}
+        <div class="container-fluid mx-0 px-0 border-bottom border-light">
+            <div class="container-fluid mx-0 px-0">
+                <img class="d-block w-100" src="{% static "img/factual.jpg/" %}" alt="First slide">
+            </div>
+        </div>
+        {% comment %} <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+</div>
+
+<!-- <div class="container my-4">
+    <h2 class="text-center py-3">Top Facts</h2>
+    <div class="row mt-3">
+        <div class="col-md-4 border border-dark bg-dark text-light flaot-right">
+            <div class="text-center">
+                <img src="{% static "img/creature.jfif" %}" class="rounded w-100 h-100" alt="loading">
+                <div class="my-4">
+                    <h3>Mysterious Creature</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem voluptatum nesciunt blanditiis. Et numquam praesentium ipsa odit quibusdam ratione molestias deserunt! Dolorem accusantium quis dolore eveniet quibusdam nisi culpa facere?</p>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Read Article</button>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4 border border-dark bg-dark text-light ml-auto">
+            <div class="text-center">
+                <img src="{% static "img/ocean.jfif" %}" class="rounded" alt="loading">
+                <div class="my-4">
+                    <h3>Space Facts</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem voluptatum nesciunt blanditiis. Et numquam praesentium ipsa odit quibusdam ratione molestias deserunt! Dolorem accusantium quis dolore eveniet quibusdam nisi culpa facere?</p>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Read Article</button>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4 border border-dark bg-dark text-light mx-auto">
+            <div class="text-center">
+                {% comment %} <img src="{% static "" %}" class="rounded" alt="loading"> {% endcomment %}
+                <div class="my-4">
+                    <h3>Mysterious Creature</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem voluptatum nesciunt blanditiis. Et numquam praesentium ipsa odit quibusdam ratione molestias deserunt! Dolorem accusantium quis dolore eveniet quibusdam nisi culpa facere?</p>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Read Article</button>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div> -->
+
+{% comment %} Top Facts {% endcomment %}
+
+<div class="container mt-5 pt-5">
+    <h2 class="text-light">Top Facts</h2>
+    <div class="card-deck mt-4">
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/ocean.jfif" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Ocean Facts</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/creatures.jpg/" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Mysterious Creatures</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/prymid.jfif/" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Prymids Facts</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+</div>
+</div>
+
+{% comment %} Scriptures {% endcomment %}
+
+<div class="container mt-5 pt-5">
+    <h2 class="text-light">Top Scriptures</h2>
+    <div class="card-deck mt-4">
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/mahabharat.jpg/" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Mahabharat</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/ramayan.jfif/" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Ramayan</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static "img/buddhism.jpg/" %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Buddhism</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <button class="btn btn-dark ">Read More</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<br>
+
+{% endblock body %}
