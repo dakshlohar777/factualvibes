@@ -5,6 +5,7 @@ import math
 def home(request):
     top_facts = Blog.objects.filter(category='fact')[:3]
     top_scriptures = Blog.objects.filter(category='scripture')[:3]
+    top_scriptures = Blog.objects.filter(category='scripture')[:3]
 
     context = {
         'top_facts': top_facts,

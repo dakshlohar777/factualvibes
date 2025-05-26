@@ -12,6 +12,7 @@ class Blog(models.Model):
     CATEGORY_CHOICES = [
         ('fact', 'Fact'),
         ('scripture', 'Scripture'),
+        ('sports', 'Sports'),
         ('other', 'Other'),
     ]
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='other')

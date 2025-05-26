@@ -19,37 +19,28 @@
 
 <body>
 
-  <!-- Top navbar: no toggler -->
+  <!-- Top navbar -->
   <nav class="navbar" style="background-color: rgb(5, 3, 10); padding-top: 0.00001rem; padding-bottom: 0.00001rem;">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <!-- Logo: always visible -->
+      <!-- Logo -->
       <a class="navbar-brand mb-0" href="/">
         <img src="{% static 'img/factualvibes.jpg' %}" alt="Factual Vibes Logo" class="img-fluid" style="max-height: 40px;" />
       </a>
 
-      <!-- Search: hidden on xs/sm -->
-      <form class="form-inline mx-auto d-none d-md-flex" action="/search" method="get" style="max-width: 280px; width: 100%;">
-        <input class="form-control form-control-sm shadow-sm" type="search" placeholder="Search blog posts..." aria-label="Search" name="q"
-          style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); border-radius: 0.25rem 0 0 0.25rem;" />
-        <button class="btn btn-light btn-sm ml-0 shadow-sm" type="submit" aria-label="Search Button" style="border-radius: 0 0.25rem 0.25rem 0;">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-
-      <!-- Social icons: hidden on xs/sm -->
+      <!-- Social icons -->
       <div class="d-none d-md-flex align-items-center ml-3 justify-content-center">
         <a href="https://www.facebook.com/share/1EjUXJHNLo/?mibextid=qi2Omg" class="text-white ml-3" aria-label="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
         <a href="https://github.com/dakshlohar777" class="text-white ml-3" aria-label="Github"><i class="fa fa-github fa-lg"></i></a>
         <a href="https://www.instagram.com/daksh.lohar_7?igsh=MTF2YXBvZGo4bm43aw==" class="text-white ml-3" aria-label="Instagram"><i class="fa fa-instagram fa-lg"></i></a>
         <a href="#" class="text-white ml-3" aria-label="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dakshlohar1311@gmail.com" class="text-white ml-3" aria-label="Envelope"><i class="fa fa-envelope fa-lg"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dakshlohar1311@gmail.com" class="text-white ml-3" aria-label="Email"><i class="fa fa-envelope fa-lg"></i></a>
       </div>
 
     </div>
   </nav>
 
-  <!-- Main navbar with toggler -->
+  <!-- Main navbar -->
   <nav class="navbar nav-2 navbar-expand-lg navbar-dark bg-info border-bottom border-light">
     <div class="container">
       <a class="navbar-brand text-dark font-weight-bold" href="/">Factual Vibes</a>
@@ -61,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item {% block homeactive %}{% endblock homeactive %}">
-            <a class="nav-link text-light font-weight-bold" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-light font-weight-bold" href="/">Home</a>
           </li>
           <li class="nav-item {% block blogactive %}{% endblock blogactive %}">
             <a class="nav-link text-light font-weight-bold" href="/blog">Blog</a>
@@ -73,10 +64,6 @@
             <a class="nav-link text-light font-weight-bold" href="/contact">Contact</a>
           </li>
         </ul>
-        {% comment %} <form action="/search" method="get" class="form-inline my-2 my-lg-0">
-          <button class="btn btn-dark btn-lg mr-2 my-sm-0" type="submit">Login</button>
-          <button class="btn btn-outline-dark btn-lg my-2 my-sm-0" type="submit">Signup</button>
-        </form> {% endcomment %}
       </div>
     </div>
   </nav>
@@ -91,8 +78,7 @@
 
         <div class="col-md-4 mb-3 text-center text-md-start">
           <a href="/">
-            <img src="{% static 'img/factualvibes.jpg' %}" alt="Factual Vibes Logo" class="img-fluid rounded-circle"
-              style="max-height: 90px;" />
+            <img src="{% static 'img/factualvibes.jpg' %}" alt="Factual Vibes Logo" class="img-fluid rounded-circle" style="max-height: 90px;" />
           </a>
         </div>
 
@@ -128,8 +114,8 @@
       </div>
 
       <hr class="border-light" />
-
       <div class="text-center">
+        {% now "Y" as current_year %}
         <p class="mb-0">&copy; {{ current_year }} Factual Vibes. All rights reserved.</p>
       </div>
     </div>
