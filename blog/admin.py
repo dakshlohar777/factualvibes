@@ -1,6 +1,9 @@
 from django.contrib import admin
 from blog.models import Blog, Contact, About
 
+admin.site.site_header = "Factual Vibes"
+admin.site.site_title = "Factual Vibes"
+
 # Register your models here.
 
 class BlogAdmin(admin.ModelAdmin):
